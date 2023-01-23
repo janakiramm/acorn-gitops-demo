@@ -17,6 +17,36 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
+  name: metallb-ip-pool
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: metallb
+  patches:
+    - patch: |-
+        apiVersion: metallb.io/v1beta1
+        kind: IPAddressPool
+        metadata:
+          name: first-pool
+          namespace: metallb-system
+        spec:
+          addresses:
+          - 192.168.64.200-192.168.64.210
+      target:
+        kind: IPAddressPool
+  interval: 1h
+  retryInterval: 1m
+  timeout: 5m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./infrastructure/metallb/ip-pool
+  prune: true
+  wait: true
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
   name: nginx-ingress
   namespace: flux-system
 spec:
