@@ -14,6 +14,8 @@ spec:
         spec:
           addresses:
           - 192.168.64.200-192.168.64.210
+    target:
+      kind: IPAddressPool         
   interval: 1h
   retryInterval: 1m
   timeout: 5m
