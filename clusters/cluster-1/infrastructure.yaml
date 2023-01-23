@@ -31,7 +31,7 @@ spec:
           namespace: metallb-system
         spec:
           addresses:
-          - 192.168.64.200-192.168.64.210
+          - 192.168.64.201-192.168.64.210
       target:
         kind: IPAddressPool         
   interval: 1h
@@ -47,7 +47,7 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: nginx-ingress
+  name: ingress-nginx
   namespace: flux-system
 spec:
   interval: 1h
