@@ -11,6 +11,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m
+  targetNamespace: metallb-system
   chart:
     spec:
       chart: metallb
@@ -19,5 +20,3 @@ spec:
         name:  metallb
         namespace: flux-system
       interval: 1m
-  values:
-    replicaCount: 2
