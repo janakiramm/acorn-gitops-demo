@@ -4,18 +4,6 @@ metadata:
   name: infrastructure
   namespace: flux-system
 spec:
-  patches:
-    - patch: |- 
-        apiVersion: metallb.io/v1beta1
-        kind: IPAddressPool
-        metadata:
-          name: first-pool
-          namespace: metallb-system
-        spec:
-          addresses:
-          - 192.168.64.200-192.168.64.210
-      target:
-        kind: IPAddressPool         
   interval: 1h
   retryInterval: 1m
   timeout: 5m
