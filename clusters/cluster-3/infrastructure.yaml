@@ -31,7 +31,7 @@ spec:
           namespace: metallb-system
         spec:
           addresses:
-          - 192.168.64.200-192.168.64.210
+          - 192.168.64.221-192.168.64.230
       target:
         kind: IPAddressPool
   interval: 1h
