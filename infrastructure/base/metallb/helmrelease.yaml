@@ -11,4 +11,6 @@ spec:
         kind: HelmRepository
         name: metallb
       version: 0.0.0
+      install:
+        createNamespace: true
   interval: 1m0s
