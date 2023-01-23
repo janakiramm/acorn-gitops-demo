@@ -56,6 +56,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./infrastructure/nginx-ingress
+  path: ./infrastructure/ingress-nginx
   prune: true
   wait: true

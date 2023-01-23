@@ -40,14 +40,14 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./infrastructure/metallb/ip-pool
+  path: ./infrastructure/ip-pool
   prune: true
   wait: true
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: nginx-ingress
+  name: ingress-nginx
   namespace: flux-system
 spec:
   interval: 1h
@@ -56,6 +56,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./infrastructure/nginx-ingress
+  path: ./infrastructure/ingress-nginx
   prune: true
   wait: true
