@@ -10,7 +10,7 @@ metadata:
   name: metallb
   namespace: metallb-system
 spec:
-  interval: 5m
+  interval: 3m
   targetNamespace: metallb-system
   chart:
     spec:
