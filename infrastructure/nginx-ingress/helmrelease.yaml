@@ -14,9 +14,9 @@ spec:
   targetNamespace: ingress-nginx
   chart:
     spec:
-      chart: nginx-ingress
+      chart: ingress-nginx
       sourceRef:
         kind: HelmRepository
-        name:  nginx-ingress
-        namespace: nginx-ingress
+        name: ingress-nginx
+        namespace: ingress-nginx
       interval: 1m
