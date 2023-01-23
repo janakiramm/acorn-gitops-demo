@@ -10,11 +10,14 @@ metadata:
   name: metallb
   namespace: flux-system
 spec:
-  releaseName: metallb
-  targetNamespace: metallb-system
+  interval: 5m
   chart:
-    sourceRef:
-      kind: HelmRepository
-      name: metallb
-      namespace: flux-system
-  interval: 1m0s
+    spec:
+      chart: metallb
+      sourceRef:
+        kind: HelmRepository
+        name:  metallb
+        namespace: flux-system
+      interval: 1m
+  values:
+    replicaCount: 2
