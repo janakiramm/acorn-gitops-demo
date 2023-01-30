@@ -2,12 +2,12 @@
 apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImagePolicy
 metadata:
-  name: podinfo
+  name: app-policy
   namespace: flux-system
 spec:
   imageRepositoryRef:
-    name: podinfo
+    name: acorn-app
   policy:
     semver:
-      range: 5.0.x
+      range: 1.0.x
 
