@@ -1,0 +1,10 @@
+apiVersion: api.acorn.io/v1
+kind: App
+metadata:
+  name: demo
+  namespace: acorn
+spec:
+  image: index.docker.io/janakiramm/acorn-app:1.0.0 # {"$imagepolicy": "flux-system:app-policy"}
+  ports:
+  - publish: true
+    targetPort: 80
