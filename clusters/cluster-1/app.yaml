@@ -4,7 +4,7 @@ metadata:
   name: acorn-app
   namespace: acorn
 spec:
-  image: index.docker.io/janakiramm/acorn-app:1.0.0 # {"$imagepolicy": "flux-system:app-policy"}
+  image: index.docker.io/janakiramm/acorn-app:1.0.1 # {"$imagepolicy": "flux-system:app-policy"}
   ports:
   - publish: true
     targetPort: 80
