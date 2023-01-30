@@ -1,0 +1,10 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageRepository
+metadata:
+  name: app-repo
+  namespace: flux-system
+spec:
+  image: index.docker.io/janakiramm/acorn-app
+  interval: 1m0s
+
