@@ -1,0 +1,10 @@
+containers: {
+ web: {
+  image: "nginx"
+  ports: publish: "80/http"
+  files: {
+   // Simple index.html file
+   "/usr/share/nginx/html/index.html": "<h1>My First Acorn v2!</h1>"
+  }
+ }
+}
