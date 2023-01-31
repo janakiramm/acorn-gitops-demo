@@ -1,7 +1,7 @@
 apiVersion: api.acorn.io/v1
 kind: App
 metadata:
-  name: restless-pine
+  name: simple-app
   namespace: acorn
 spec:
   image: index.docker.io/janakiramm/simple-acorn-app:v1.0.0
