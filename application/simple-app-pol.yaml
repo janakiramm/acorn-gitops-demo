@@ -2,7 +2,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
   name: simple-app
-  namespace: acorn
+  namespace: flux-system
 spec:
   images:
     - name: index.docker.io/janakiramm/simple-acorn-app
