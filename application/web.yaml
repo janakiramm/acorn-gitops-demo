@@ -1,0 +1,10 @@
+apiVersion: api.acorn.io/v1
+kind: App
+metadata:
+  name: web
+  namespace: acorn
+spec:
+  image: nginx 
+  ports:
+  - publish: true
+    targetPort: 80
